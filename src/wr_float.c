@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   wr_float.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nathan <nathan@student.42.fr>              +#+  +:+       +#+        */
+/*   By: ielmoudn <ielmoudn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/11 14:29:45 by ismail            #+#    #+#             */
-/*   Updated: 2020/02/02 11:24:25 by nathan           ###   ########.fr       */
+/*   Updated: 2020/02/29 13:15:54 by ielmoudn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,7 @@ char	*dsp_fl_h(t_all *env, char **fl_part, size_t *t_fl, int dim)
 {
 	int carry;
 
-	if (env->prec_ex == 0 || (env->prec_val < 0))
+	if (env->prec_ex == 0)
 		env->prec_val = 6;
 	*fl_part = ft_strnew(env->prec_val + 1);
 	carry = ft_float(env, t_fl, fl_part, dim);
@@ -93,6 +93,8 @@ void	dsp_float(t_all *env, unsigned char s, size_t *t_fl, int dim)
 
 void	wr_float(t_all *env)
 {
+	if (env->prec_ex)
+		(env->prec_val >= __INT32_MAX__) ? env->prec_val = 6 : 1;
 	if (env->len_mod == 16)
 		ft_printf_ld(env);
 	else

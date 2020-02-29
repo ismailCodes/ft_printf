@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   wr_o.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nathan <nathan@student.42.fr>              +#+  +:+       +#+        */
+/*   By: ielmoudn <ielmoudn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/04 12:35:03 by ismail            #+#    #+#             */
-/*   Updated: 2020/02/02 11:24:25 by nathan           ###   ########.fr       */
+/*   Updated: 2020/02/29 13:01:01 by ielmoudn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ static void	wr_o_helper_i(t_all *env, int *minwidth, int *prec, int len)
 	if (!(env->flags & F_MINUS) && (env->prec_ex || !(env->flags & F_ZERO)))
 	{
 		if (env->flags & F_HASH && !((int)env->prec_val > len))
-			*minwidth -= (env->prec_ex) ? 1 : 2;
+			*minwidth -= 1;
 		while ((*minwidth)-- > 0 && (++env->o_backup))
 			env->printed += write(1, " ", 1);
 	}

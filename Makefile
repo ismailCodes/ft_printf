@@ -6,7 +6,7 @@
 #    By: ielmoudn <ielmoudn@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/10/04 21:40:46 by ielmoudn          #+#    #+#              #
-#    Updated: 2020/02/07 18:17:09 by ielmoudn         ###   ########.fr        #
+#    Updated: 2020/02/29 10:49:58 by ielmoudn         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -106,5 +106,5 @@ fclean: clean
 	@echo "$(NAME): $(RED)$(NAME) was deleted$(RESET)"
 
 re:
-	@$(MAKE) fclean
-	@$(MAKE) all
+	$(MAKE) fclean
+	$(MAKE) all

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   wr_str.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nathan <nathan@student.42.fr>              +#+  +:+       +#+        */
+/*   By: ielmoudn <ielmoudn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/29 12:10:48 by ismail            #+#    #+#             */
-/*   Updated: 2020/02/01 12:25:51 by nathan           ###   ########.fr       */
+/*   Updated: 2020/02/20 23:34:27 by ielmoudn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,11 +30,13 @@ void	wr_str_prec(t_all *env, char *str, size_t len)
 	if (env->width > len && (env->flags & F_MINUS))
 	{
 		ft_printlen(env, str, len);
-		print_sp(env, (env->width - len), ' ');
+		if (env->width < 2147483647)
+			print_sp(env, (env->width - len), ' ');
 	}
 	else
 	{
-		print_sp(env, (env->width - len), ' ');
+		if (env->width < 2147483647)
+			print_sp(env, (env->width - len), ' ');
 		ft_printlen(env, str, len);
 	}
 }
@@ -44,11 +46,13 @@ void	wr_str_noprec(t_all *env, char *str, size_t len, int min)
 	if (env->width > len && (env->flags & F_MINUS))
 	{
 		ft_printlen(env, str, min);
-		print_sp(env, env->width - min, ' ');
+		if (env->width < 2147483647)
+			print_sp(env, env->width - min, ' ');
 	}
 	else
 	{
-		print_sp(env, env->width - min, ' ');
+		if (env->width < 2147483647)
+			print_sp(env, env->width - min, ' ');
 		ft_printlen(env, str, min);
 	}
 }

@@ -6,7 +6,7 @@
 /*   By: ielmoudn <ielmoudn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/08 23:11:27 by ismail            #+#    #+#             */
-/*   Updated: 2020/02/07 18:18:14 by ielmoudn         ###   ########.fr       */
+/*   Updated: 2020/02/20 22:52:52 by ielmoudn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,7 @@ typedef struct		s_all
 	short			len_mod;
 	size_t			width;
 	int				prec_ex;
-	int				prec_val;
+	size_t			prec_val;
 	char			*int_help;
 	int				is_neg;
 	int				o_backup;

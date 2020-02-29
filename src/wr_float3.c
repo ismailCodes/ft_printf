@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   wr_float3.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nathan <nathan@student.42.fr>              +#+  +:+       +#+        */
+/*   By: ielmoudn <ielmoudn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/01 19:49:49 by nathan            #+#    #+#             */
-/*   Updated: 2020/02/02 11:24:25 by nathan           ###   ########.fr       */
+/*   Updated: 2020/02/20 22:54:28 by ielmoudn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,7 +82,7 @@ void	ft_multiply_ten(size_t **table, int len)
 int		ft_float(t_all *env, size_t *tbl_fl, char **part_fl, int dim)
 {
 	int		borrow;
-	int		i;
+	size_t	i;
 	size_t	*table;
 	size_t	*t;
 

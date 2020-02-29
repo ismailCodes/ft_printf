@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   util1.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nathan <nathan@student.42.fr>              +#+  +:+       +#+        */
+/*   By: ielmoudn <ielmoudn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/29 12:06:16 by ismail            #+#    #+#             */
-/*   Updated: 2020/02/01 12:25:51 by nathan           ###   ########.fr       */
+/*   Updated: 2020/02/20 22:54:16 by ielmoudn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ void			app_sign(t_all *env, char **int_str)
 
 void			app_prec(t_all *env, char **int_str, char beg_end)
 {
-	int			len;
+	size_t		len;
 
 	len = ft_strlen(*int_str);
 	if (env->prec_ex)
